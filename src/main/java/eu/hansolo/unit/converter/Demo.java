@@ -70,6 +70,15 @@ public class Demo {
         System.out.println(Converter.format(1_500_000, 1));
 
         System.out.println(Converter.format(1_000_000, 0));
+
+        // Dynamic units
+        Converter.UnitDefinition fromUnit = get("ml");
+        Converter omniConverter = new Converter(fromUnit.UNIT.getCategory(), fromUnit);
+        Converter.UnitDefinition toUnit = get("l");
+        double ml = 1000;
+        double dynamicLiter = omniConverter.convert(ml, toUnit);
+        System.out.println(ml + " ml -> " + dynamicLiter + " l");
+
     }
 
     public static void main(String[] args) {
