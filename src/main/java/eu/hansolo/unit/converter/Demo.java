@@ -72,9 +72,9 @@ public class Demo {
         System.out.println(Converter.format(1_000_000, 0));
 
         // Dynamic units
-        Converter.UnitDefinition fromUnit = get("ml");
+        Converter.UnitDefinition fromUnit = get("ml-Milliliter");
         Converter omniConverter = new Converter(fromUnit.UNIT.getCategory(), fromUnit);
-        Converter.UnitDefinition toUnit = get("L");
+        Converter.UnitDefinition toUnit = get(fromUnit.UNIT.getCategory(), "L");
         double ml = 1000;
         double dynamicLiter = omniConverter.convert(ml, toUnit);
         System.out.println(ml + " ml -> " + dynamicLiter + " L");

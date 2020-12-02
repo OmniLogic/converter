@@ -264,13 +264,23 @@ public class Converter {
         private static final Map<String, UnitDefinition> lookup = new HashMap<>();
 
         static {
-            for (UnitDefinition et: UnitDefinition.values()) {
-                lookup.put(et.UNIT.getUnitShort(), et);
+            for (UnitDefinition unitDefinition: UnitDefinition.values()) {
+                Unit validUnit = unitDefinition.UNIT;
+                lookup.put(String.format("%s-%s", validUnit.getUnitShort(), validUnit.getUnitName()), unitDefinition);
             }
         }
 
-        public static UnitDefinition get(String unit) {
-            return lookup.get(unit);
+        public static UnitDefinition get(String key) {
+            return lookup.get(key);
+        }
+
+        public static UnitDefinition get(Category category, String unit) {
+            for (UnitDefinition unitDefinition: UnitDefinition.values()) {
+                Unit validUnit = unitDefinition.UNIT;
+                if (validUnit.getCategory().equals(category) && validUnit.getUnitShort().equals(unit))
+                    return unitDefinition;
+            }
+            return null;
         }
     }
 
