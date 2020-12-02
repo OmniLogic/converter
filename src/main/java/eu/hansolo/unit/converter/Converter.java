@@ -228,7 +228,7 @@ public class Converter {
         CANDELA_SQUARE_CENTIMETER(new Unit(Category.LUMINANCE, "cd/cm\u00b2", "Candela per Square CentiMeter", new BigDecimal("10000.0"))),
         CANDELA_SQUARE_INCH(new Unit(Category.LUMINANCE, "cd/in\u00b2", "Candela per Square Inch", new BigDecimal("1550.0031"))),
         CANDELA_SQAURE_FOOT(new Unit(Category.LUMINANCE, "cd/ft\u00b2", "Candela per Square Foot", new BigDecimal("10.7639104167"))),
-//        LAMBERT(new Unit(Category.LUMINANCE, "L", "Lambert", new BigDecimal("3183.09886183"))),
+        LAMBERT(new Unit(Category.LUMINANCE, "L", "Lambert", new BigDecimal("3183.09886183"))),
         FOOT_LAMBERT(new Unit(Category.LUMINANCE, "fL", "Footlambert", new BigDecimal("3.4262590996"))),
 
         // Luminous flux
