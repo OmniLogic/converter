@@ -74,10 +74,10 @@ public class Demo {
         // Dynamic units
         Converter.UnitDefinition fromUnit = get("ml");
         Converter omniConverter = new Converter(fromUnit.UNIT.getCategory(), fromUnit);
-        Converter.UnitDefinition toUnit = get("l");
+        Converter.UnitDefinition toUnit = get("L");
         double ml = 1000;
         double dynamicLiter = omniConverter.convert(ml, toUnit);
-        System.out.println(ml + " ml -> " + dynamicLiter + " l");
+        System.out.println(ml + " ml -> " + dynamicLiter + " L");
 
     }
 

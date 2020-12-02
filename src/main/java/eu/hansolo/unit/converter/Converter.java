@@ -128,6 +128,7 @@ public class Converter {
         CUBIC_MILLIMETER(new Unit(Category.VOLUME, "mm\u00b3", "Cubic Millimeter", new BigDecimal("1.0E-9"))),
         MILLILITER(new Unit(Category.VOLUME, "ml", "Milliliter", new BigDecimal("1.0E-6"))),
         LITER(new Unit(Category.VOLUME, "l", "Liter", new BigDecimal("1.0E-3"))),
+        LITER_CASED(new Unit(Category.VOLUME, "L", "Liter", new BigDecimal("1.0E-3"))),
         CUBIC_METER(new Unit(Category.VOLUME, "m\u00b3", "Cubic Meter", new BigDecimal("1.0E0"))),
         GALLON(new Unit(Category.VOLUME, "gal", "US Gallon", new BigDecimal("0.0037854118"))),
         CUBIC_FEET(new Unit(Category.VOLUME, "ft\u00b3", "Cubic Foot", new BigDecimal("0.0283168466"))),
@@ -227,7 +228,7 @@ public class Converter {
         CANDELA_SQUARE_CENTIMETER(new Unit(Category.LUMINANCE, "cd/cm\u00b2", "Candela per Square CentiMeter", new BigDecimal("10000.0"))),
         CANDELA_SQUARE_INCH(new Unit(Category.LUMINANCE, "cd/in\u00b2", "Candela per Square Inch", new BigDecimal("1550.0031"))),
         CANDELA_SQAURE_FOOT(new Unit(Category.LUMINANCE, "cd/ft\u00b2", "Candela per Square Foot", new BigDecimal("10.7639104167"))),
-        LAMBERT(new Unit(Category.LUMINANCE, "L", "Lambert", new BigDecimal("3183.09886183"))),
+//        LAMBERT(new Unit(Category.LUMINANCE, "L", "Lambert", new BigDecimal("3183.09886183"))),
         FOOT_LAMBERT(new Unit(Category.LUMINANCE, "fL", "Footlambert", new BigDecimal("3.4262590996"))),
 
         // Luminous flux
